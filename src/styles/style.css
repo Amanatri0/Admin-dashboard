@@ -1,0 +1,237 @@
+.dashboard {
+  overflow-y: auto;
+}
+.dashboard .bar {
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: center;
+  gap: 10px;
+  padding: 0 1rem;
+  border-bottom: 1px solid grey;
+}
+.dashboard .bar > input {
+  margin-right: auto;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+}
+.dashboard .bar > svg {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+.dashboard .bar > img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+.dashboard .widgetContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 2rem 2rem;
+}
+.dashboard .widgetContainer .widget {
+  width: 16rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
+  padding: 2rem;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+}
+.dashboard .widgetContainer .widget .widgetInfo > p {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+.dashboard .widgetContainer .widget .widgetInfo h4 {
+  font-size: 1.5rem;
+}
+.dashboard .widgetContainer .widget .widgetInfo span {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: center 0.2rem;
+  gap: 10px;
+}
+.dashboard .widgetContainer .widget .widgetCircle {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  flex: none;
+  display: grid;
+  place-items: center;
+  background-color: red;
+}
+.dashboard .widgetContainer .widget .widgetCircle::before {
+  content: "";
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.dashboard .widgetContainer .widget .widgetCircle span {
+  position: relative;
+}
+.dashboard .graphContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: unset;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+.dashboard .graphContainer > div {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.dashboard .graphContainer .revenueChart {
+  width: 100%;
+  padding: 1rem 3rem;
+}
+.dashboard .graphContainer .revenueChart > h2 {
+  letter-spacing: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 1rem 0 2rem 0.25rem;
+  text-align: center;
+}
+.dashboard .graphContainer .dashboardCategories {
+  width: 100%;
+  max-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  gap: 0;
+  padding-bottom: 2rem;
+}
+.dashboard .graphContainer .dashboardCategories > h2 {
+  letter-spacing: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 1.5rem 0 2rem 0;
+  text-align: center;
+}
+.dashboard .graphContainer .dashboardCategories > div {
+  overflow-y: auto;
+  padding-left: 0.5rem;
+}
+.dashboard .graphContainer .dashboardCategories .categoryItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+}
+.dashboard .graphContainer .dashboardCategories .categoryItem > h5 {
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.dashboard .graphContainer .dashboardCategories .categoryItem > div {
+  margin-left: auto;
+  width: 6rem;
+  background-color: rgb(217, 217, 217);
+  border-radius: 20px;
+  height: 0.5rem;
+  flex: none;
+}
+.dashboard .graphContainer .dashboardCategories .categoryItem > div > div {
+  height: 100%;
+  border-radius: 20px;
+}
+.dashboard .graphContainer .dashboardCategories .categoryItem > span {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.red {
+  color: red;
+}
+
+.purple {
+  color: rgb(47, 0, 255);
+}
+
+.green {
+  color: rgb(0, 195, 0);
+}
+
+.adminContainer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: unset;
+  gap: 2rem;
+  height: 100vh;
+  background-color: rgb(247, 247, 247);
+}
+.adminContainer > aside {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  z-index: 10;
+  overflow-y: auto;
+}
+.adminContainer > aside::-webkit-scrollbar {
+  display: none;
+}
+.adminContainer > aside > div {
+  margin: 1rem 1rem;
+}
+.adminContainer > aside > div > h5 {
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 1rem 0;
+}
+.adminContainer > aside > div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+.adminContainer > aside > div ul > li {
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.adminContainer > aside > div ul > li a {
+  color: rgba(0, 0, 0, 0.825);
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: center;
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */
