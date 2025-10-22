@@ -142,4 +142,35 @@
       }
     }
   }
+
+  .transactionContainer {
+    @include flex(row, unset, unset, 2rem);
+    padding: 2rem 2rem;
+    height: 30rem;
+
+    > div {
+      background-color: #fff;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.132);
+      border-radius: 10px;
+    }
+
+    > .genderChart {
+      width: 100%;
+      max-width: 20rem;
+      padding: 1rem;
+      position: relative;
+
+      > h2 {
+        text-align: center;
+        margin: 1.5rem 0 2rem 0;
+        @include heading;
+      }
+
+      > p {
+        @include positionCenter;
+        font-size: 2rem;
+        color: rgba(0, 0, 0, 0.132);
+      }
+    }
+  }
 }

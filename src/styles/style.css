@@ -157,6 +157,41 @@
   font-size: 0.8rem;
   font-weight: 700;
 }
+.dashboard .transactionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: unset;
+  gap: 2rem;
+  padding: 2rem 2rem;
+  height: 30rem;
+}
+.dashboard .transactionContainer > div {
+  background-color: #fff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.132);
+  border-radius: 10px;
+}
+.dashboard .transactionContainer > .genderChart {
+  width: 100%;
+  max-width: 20rem;
+  padding: 1rem;
+  position: relative;
+}
+.dashboard .transactionContainer > .genderChart > h2 {
+  text-align: center;
+  margin: 1.5rem 0 2rem 0;
+  letter-spacing: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.dashboard .transactionContainer > .genderChart > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.132);
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

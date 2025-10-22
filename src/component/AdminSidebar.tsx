@@ -56,23 +56,23 @@ const AdminSidebar = () => {
     },
   ];
 
-  const Apps = [
-    {
-      url: "/admin/app/stopwatch",
-      icon: <BsWatch />,
-      text: "Stopwatch",
-    },
-    {
-      url: "/admin/app/cupon",
-      icon: <RiCoupon2Fill />,
-      text: "Coupon",
-    },
-    {
-      url: "/admin/app/toss",
-      icon: <BiCoin />,
-      text: "Toss",
-    },
-  ];
+  // const Apps = [
+  //   {
+  //     url: "/admin/app/stopwatch",
+  //     icon: <BsWatch />,
+  //     text: "Stopwatch",
+  //   },
+  //   {
+  //     url: "/admin/app/cupon",
+  //     icon: <RiCoupon2Fill />,
+  //     text: "Coupon",
+  //   },
+  //   {
+  //     url: "/admin/app/toss",
+  //     icon: <BiCoin />,
+  //     text: "Toss",
+  //   },
+  // ];
 
   return (
     <aside>
@@ -137,7 +137,7 @@ const AdminSidebar = () => {
       </div>
 
       {/* Apps */}
-
+      {/* 
       <div>
         <h5>Apps</h5>
         <ul>
@@ -163,7 +163,7 @@ const AdminSidebar = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </aside>
   );
 };
