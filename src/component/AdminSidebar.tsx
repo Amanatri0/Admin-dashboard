@@ -1,9 +1,9 @@
-import { BiCoin } from "react-icons/bi";
-import { BsWatch } from "react-icons/bs";
+// import { BiCoin } from "react-icons/bi";
+// import { BsWatch } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
 import {
   RiBarChart2Fill,
-  RiCoupon2Fill,
+  // RiCoupon2Fill,
   RiDashboardFill,
   RiLineChartFill,
   RiMoneyRupeeCircleFill,
