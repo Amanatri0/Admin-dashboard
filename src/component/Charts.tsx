@@ -52,6 +52,7 @@ export const BarChart = ({
     plugins: {
       legend: {
         display: true,
+        position: "right",
       },
       title: {
         display: true,

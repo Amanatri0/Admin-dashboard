@@ -12,7 +12,7 @@ interface TableProps<T extends object> {
   heading?: string;
 }
 
-function Table<T extends object>({
+function TableHOC<T extends object>({
   columns,
   data,
   containerClassname = "",
@@ -29,7 +29,7 @@ function Table<T extends object>({
       {heading && <h2 className="heading">{heading}</h2>}
 
       <table className="table">
-        {/* ==== Table Header ==== */}
+        {/*  Table Header  */}
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -47,7 +47,7 @@ function Table<T extends object>({
           ))}
         </thead>
 
-        {/* ==== Table Body ==== */}
+        {/*  Table Body  */}
         <tbody>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
@@ -64,4 +64,4 @@ function Table<T extends object>({
   );
 }
 
-export default Table;
+export default TableHOC;

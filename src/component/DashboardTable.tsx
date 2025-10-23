@@ -1,5 +1,5 @@
-import type { Column } from "@tanstack/react-table";
-import Table from "./Table";
+import type { ColumnDef } from "@tanstack/react-table";
+import TableHOC from "./TableHOC";
 
 interface DataType {
   id: string;
@@ -9,31 +9,38 @@ interface DataType {
   status: string;
 }
 
-const columns: Column<DataType> = [
+const columns: ColumnDef<DataType>[] = [
   {
-    Header: "Id",
-    accessor: "id",
+    accessorKey: "id",
+    header: "ID",
   },
   {
-    Header: "Quantity",
-    accessor: "quantity",
+    accessorKey: "quantity",
+    header: "Quantity",
   },
   {
-    Header: "Discount",
-    accessor: "discount",
+    accessorKey: "discount",
+    header: "Discount",
   },
   {
-    Header: "Amount",
-    accessor: "amount",
+    accessorKey: "amount",
+    header: "Amount",
   },
   {
-    Header: "Status",
-    accessor: "status",
+    accessorKey: "status",
+    header: "Status",
   },
 ];
 
-const DashboardTable = () => {
-  return Table<DataType>(columns, [], "transactionBox", "Top Transaction");
+const DashboardTable = ({ data = [] }: { data: DataType[] }) => {
+  return (
+    <TableHOC<DataType>
+      columns={columns}
+      data={data} // you can replace [] with real data
+      containerClassname="transactionBox"
+      heading="Top Transaction"
+    />
+  );
 };
 
 export default DashboardTable;

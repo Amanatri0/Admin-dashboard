@@ -48,3 +48,16 @@
   height: $height;
   width: $height;
 }
+
+@mixin button(
+  $padding: 1rem,
+  $border: none,
+  $outline: none,
+  $borderRadius: inherit
+) {
+  padding: $padding;
+  border: $border;
+  outline: $outline;
+  border-radius: $borderRadius;
+  cursor: pointer;
+}
