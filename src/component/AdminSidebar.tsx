@@ -17,21 +17,25 @@ const AdminSidebar = () => {
 
   const Dashboard = [
     {
+      id: 1,
       url: "/admin/dashboard",
       icon: <RiDashboardFill />,
       text: "Dashboard",
     },
     {
+      id: 2,
       url: "/admin/product",
       icon: <RiShoppingBag3Fill />,
       text: "Product",
     },
     {
+      id: 3,
       url: "/admin/customer",
       icon: <IoIosPeople />,
       text: "Customer",
     },
     {
+      id: 4,
       url: "/admin/transaction",
       icon: <RiMoneyRupeeCircleFill />,
       text: "Transaction",
@@ -40,16 +44,19 @@ const AdminSidebar = () => {
 
   const Charts = [
     {
+      id: 1,
       url: "/admin/chart/bar",
       icon: <RiBarChart2Fill />,
       text: "Bar",
     },
     {
+      id: 2,
       url: "/admin/chart/pie",
       icon: <RiPieChart2Fill />,
       text: "Pie",
     },
     {
+      id: 3,
       url: "/admin/chart/line",
       icon: <RiLineChartFill />,
       text: "Line",
@@ -90,6 +97,7 @@ const AdminSidebar = () => {
                   ? "rgba(0,115, 255, 0.1)"
                   : "white",
               }}
+              key={item.id}
             >
               <Link
                 to={item.url}
@@ -119,6 +127,7 @@ const AdminSidebar = () => {
                   ? "rgba(0,115, 255, 0.1)"
                   : "white",
               }}
+              key={item.id}
             >
               <Link
                 to={item.url}

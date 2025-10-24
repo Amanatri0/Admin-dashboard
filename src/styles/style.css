@@ -204,6 +204,33 @@
   text-transform: uppercase;
 }
 
+.dashboardProductBox {
+  background-color: #fff;
+  padding: 2rem;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.createProductButton {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  border-radius: 50%;
+  background-color: rgb(201, 9, 9);
+  color: #fff;
+}
+.createProductButton:hover {
+  opacity: 0.8;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
