@@ -204,6 +204,10 @@
   text-transform: uppercase;
 }
 
+.sortToggle {
+  cursor: pointer;
+}
+
 .dashboardProductBox {
   background-color: #fff;
   padding: 2rem;
@@ -365,4 +369,16 @@ a {
 }
 .table tbody td:last-child {
   border-right: none;
+}
+
+.tablePagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 2rem;
+}
+.tablePagination > button {
+  padding: 0.5rem 1 rem;
 }/*# sourceMappingURL=style.css.map */

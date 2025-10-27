@@ -15,12 +15,13 @@ interface Datatype {
 
 const columns: ColumnDef<Datatype>[] = [
   {
-    accessorKey: "photo",
-    header: "Photo",
-  },
-  {
     accessorKey: "name",
     header: "Name",
+  },
+  {
+    accessorKey: "action",
+    header: "Action",
+    cell: ({ row }) => row.original.action,
   },
   {
     accessorKey: "price",
@@ -31,31 +32,84 @@ const columns: ColumnDef<Datatype>[] = [
     header: "Stock",
   },
   {
-    accessorKey: "action",
-    header: "Action",
+    accessorKey: "photo",
+    header: "Photo",
+    cell: ({ row }) => row.original.photo,
   },
 ];
 
 const img =
-  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804";
+  "https://yamahamusicstore.in/products-images/enlarge-image/VDN7140.webp?v=1761410324";
 
 const img2 = "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg";
 
 const arr: Datatype[] = [
   {
-    photo: <img src={img} alt="elec" />,
-    name: "Puma Shoes Air Jordan Cook Nigga 2023",
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
     price: 690,
     stock: 3,
-    action: <Link to="/">Manage</Link>,
+    photo: <img src={img} alt="elec" />,
   },
 
   {
-    photo: <img src={img2} alt="image" />,
-    name: "Macbook",
-    price: 232223,
-    stock: 213,
+    name: "Seb laptop",
     action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
   },
 ];
 
