@@ -2,6 +2,7 @@ import {
   useReactTable,
   getCoreRowModel,
   getSortedRowModel,
+  getPaginationRowModel,
   flexRender,
   type ColumnDef,
   type SortingState,
@@ -9,8 +10,8 @@ import {
 import { useState } from "react";
 
 interface TableProps<T extends object> {
-  columns: ColumnDef<T>[]; // columns definition
-  data: T[]; // table data
+  columns: ColumnDef<T>[];
+  data: T[];
   containerClassname?: string;
   heading?: string;
   showPagination?: boolean;
@@ -23,7 +24,6 @@ function TableHOC<T extends object>({
   heading = "",
   showPagination = true,
 }: TableProps<T>) {
-  // State for sorting
   const [sorting, setSorting] = useState<SortingState>([]);
 
   const table = useReactTable({
@@ -33,14 +33,16 @@ function TableHOC<T extends object>({
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
   });
 
   return (
     <div className={containerClassname}>
       {heading && <h2 className="heading">{heading}</h2>}
 
+      {/* Table */}
       <table className="table">
-        {/* Table Header */}
+        {/* Header */}
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -48,7 +50,9 @@ function TableHOC<T extends object>({
                 <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
-                  className="sortToggle"
+                  style={{
+                    cursor: "pointer",
+                  }}
                 >
                   {header.isPlaceholder ? null : (
                     <>
@@ -56,10 +60,8 @@ function TableHOC<T extends object>({
                         header.column.columnDef.header,
                         header.getContext()
                       )}
-                      {{
-                        asc: " 🔼",
-                        desc: " 🔽",
-                      }[header.column.getIsSorted() as string] ?? null}
+                      {header.column.getIsSorted() === "asc" && " 🔼"}
+                      {header.column.getIsSorted() === "desc" && " 🔽"}
                     </>
                   )}
                 </th>
@@ -68,7 +70,7 @@ function TableHOC<T extends object>({
           ))}
         </thead>
 
-        {/* Table Body */}
+        {/* Body */}
         <tbody>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
@@ -82,24 +84,57 @@ function TableHOC<T extends object>({
         </tbody>
       </table>
 
+      {/*  Pagination Controls */}
       {showPagination && (
         <div className="tablePagination">
           <button
-            disabled={!table.getCanPreviousPage}
-            onClick={table.previousPage}
+            onClick={() => table.setPageIndex(0)}
+            disabled={!table.getCanPreviousPage()}
           >
-            Prev
+            ⏮ First
+          </button>
+
+          <button
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            ◀ Prev
           </button>
 
           <span>
-            {`${
-              table.getState().pagination.pageIndex + 1
-            } of page  ${table.getPageCount()} `}{" "}
+            Page{" "}
+            <strong>
+              {table.getState().pagination.pageIndex + 1} of{" "}
+              {table.getPageCount()}
+            </strong>
           </span>
 
-          <button disabled={!table.getCanNextPage} onClick={table.nextPage}>
-            Next
+          <button
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            Next ▶
           </button>
+
+          <button
+            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+            disabled={!table.getCanNextPage()}
+          >
+            Last ⏭
+          </button>
+
+          {/* Optional page size selector */}
+          <select
+            value={table.getState().pagination.pageSize}
+            onChange={(e) => table.setPageSize(Number(e.target.value))}
+            className="pageSelector"
+          >
+            {[4, 10, 20, 50].map((size) => (
+              <option key={size} value={size}>
+                Show {size}
+              </option>
+            ))}
+          </select>
         </div>
       )}
     </div>

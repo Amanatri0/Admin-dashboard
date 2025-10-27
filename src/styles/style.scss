@@ -133,8 +133,12 @@ a {
 
 .tablePagination {
   @include flex;
-  padding: 2rem;
+  padding: 1rem;
   > button {
-    @include button(1rem, 10px);
+    @include button(1rem, 10px, none, none);
+    &:disabled {
+      background-color: rgba(0, 115, 255, 0.1);
+      cursor: not-allowed;
+    }
   }
 }

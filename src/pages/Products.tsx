@@ -111,6 +111,141 @@ const arr: Datatype[] = [
     stock: 3,
     photo: <img src={img} alt="elec" />,
   },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
+
+  {
+    name: "Seb laptop",
+    action: <Link to="/">Manage</Link>,
+    price: 1223,
+    stock: 213,
+    photo: <img src={img2} alt="image" />,
+  },
+  {
+    name: "Yamaha PAC112VM Ice Blue Electric Guitar",
+    action: <Link to="/">Manage</Link>,
+    price: 690,
+    stock: 3,
+    photo: <img src={img} alt="elec" />,
+  },
 ];
 
 const Products = () => {
