@@ -46,7 +46,7 @@ const img2 = "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg";
 const arr: Datatype[] = [
   {
     name: "Yamaha PAC112VM Ice Blue Electric Guitar",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/aawdawdbcde"}>Manage</Link>,
     price: 690,
     stock: 3,
     photo: <img src={img} alt="elec" />,
@@ -54,14 +54,14 @@ const arr: Datatype[] = [
 
   {
     name: "Seb laptop",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/aawdawdbcde"}>Manage</Link>,
     price: 1223,
     stock: 213,
     photo: <img src={img2} alt="image" />,
   },
   {
     name: "Yamaha PAC112VM Ice Blue Electric Guitar",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/aawdawdbcde"}>Manage</Link>,
     price: 690,
     stock: 3,
     photo: <img src={img} alt="elec" />,
@@ -69,14 +69,14 @@ const arr: Datatype[] = [
 
   {
     name: "Seb laptop",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/aawdawdawdwbcde"}>Manage</Link>,
     price: 1223,
     stock: 213,
     photo: <img src={img2} alt="image" />,
   },
   {
     name: "Yamaha PAC112VM Ice Blue Electric Guitar",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/aawdawdbcde"}>Manage</Link>,
     price: 690,
     stock: 3,
     photo: <img src={img} alt="elec" />,
@@ -84,14 +84,14 @@ const arr: Datatype[] = [
 
   {
     name: "Seb laptop",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/awdawd"}>Manage</Link>,
     price: 1223,
     stock: 213,
     photo: <img src={img2} alt="image" />,
   },
   {
     name: "Yamaha PAC112VM Ice Blue Electric Guitar",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/adawawdd"}>Manage</Link>,
     price: 690,
     stock: 3,
     photo: <img src={img} alt="elec" />,
@@ -99,7 +99,7 @@ const arr: Datatype[] = [
 
   {
     name: "Seb laptop",
-    action: <Link to="/">Manage</Link>,
+    action: <Link to={"/admin/product/wdawddawd"}>Manage</Link>,
     price: 1223,
     stock: 213,
     photo: <img src={img2} alt="image" />,

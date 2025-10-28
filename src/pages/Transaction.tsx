@@ -2,13 +2,14 @@ import type { ColumnDef } from "@tanstack/react-table";
 import AdminSidebar from "../component/AdminSidebar";
 import { useCallback, useState, type ReactElement } from "react";
 import TableHOC from "../component/TableHOC";
+import { Link } from "react-router-dom";
 
 interface Datatype {
   user: string;
   amount: number;
   discount: number;
   quantity: number;
-  status: string;
+  status: ReactElement;
   action: ReactElement;
 }
 
@@ -25,7 +26,6 @@ const columns: ColumnDef<Datatype>[] = [
   {
     accessorKey: "discount",
     header: "Discount",
-    // cell: ({ row }) => row.original.action,
   },
   {
     accessorKey: "quantity",
@@ -34,6 +34,7 @@ const columns: ColumnDef<Datatype>[] = [
   {
     accessorKey: "status",
     header: "Status",
+    cell: ({ row }) => row.original.status,
   },
   {
     accessorKey: "action",
@@ -42,7 +43,40 @@ const columns: ColumnDef<Datatype>[] = [
   },
 ];
 
-const arr: Datatype[] = [];
+const arr: Datatype[] = [
+  {
+    user: "Johon Doe",
+    amount: 4500,
+    discount: 200,
+    quantity: 10,
+    status: <span className="red">Processing</span>,
+    action: <Link to={"/admin/transaction/abcde"}>Manage</Link>,
+  },
+  {
+    user: "Johon Doe",
+    amount: 4500,
+    discount: 200,
+    quantity: 10,
+    status: <span className="green">Delivered</span>,
+    action: <Link to={"/admin/transaction/abcde"}>Manage</Link>,
+  },
+  {
+    user: "Johon Doe",
+    amount: 4500,
+    discount: 200,
+    quantity: 10,
+    status: <span className="purple">Delayed</span>,
+    action: <Link to={"/admin/transaction/abcde"}>Manage</Link>,
+  },
+  {
+    user: "Johon Doe",
+    amount: 4500,
+    discount: 200,
+    quantity: 10,
+    status: <span className="red">Processing</span>,
+    action: <Link to={"/admin/transaction/abcde"}>Manage</Link>,
+  },
+];
 
 const Transaction = () => {
   const [data] = useState<Datatype[]>(arr);
