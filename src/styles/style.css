@@ -231,6 +231,130 @@
   opacity: 0.8;
 }
 
+.newProductManagement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: unset;
+  gap: 10px;
+  padding: 2rem 0 0 0;
+}
+.newProductManagement > article {
+  height: 94vh;
+  max-height: 94vh;
+  padding: 2rem;
+  width: 100%;
+  max-width: 80%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.216);
+}
+.newProductManagement > article > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+  gap: 2.3rem;
+}
+.newProductManagement > article > form > h2 {
+  letter-spacing: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.newProductManagement > article > form > img {
+  height: 5rem;
+  width: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.newProductManagement > article > form > div {
+  width: 100%;
+  position: relative;
+}
+.newProductManagement > article > form > div > label {
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  font-size: 1.2rem;
+}
+.newProductManagement > article > form > div > textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+.newProductManagement > article > form > div > input {
+  padding: 0.5rem;
+  border: 1px solid rgba(13, 13, 13, 0.196);
+  padding: 1rem;
+  border: 1px solid rgba(13, 13, 13, 0.196);
+  background-color: unset;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+}
+
+.photoShow {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "selectPhoto showPhoto " "selectPhoto showPhoto ";
+}
+.photoShow > div {
+  width: 100%;
+  position: relative;
+}
+.photoShow > div > label {
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  font-size: 1.2rem;
+}
+.photoShow > div > input {
+  padding: 0.5rem;
+  border: 1px solid rgba(13, 13, 13, 0.196);
+  padding: 1rem;
+  border: 1px solid rgba(13, 13, 13, 0.196);
+  background-color: unset;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+}
+
+.selectPhoto {
+  position: absolute;
+  grid-area: selectPhoto;
+}
+
+.showPhoto {
+  position: absolute;
+  right: 0;
+  grid-area: showPhoto;
+  width: 10vw;
+  max-width: 10vw;
+  min-width: 10vw;
+}
+
+.submitbtn {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(15, 117, 224);
+  color: #fff;
+  width: 30%;
+  margin-top: 100px;
+  border: 2px solid #fff;
+}
+.submitbtn:hover {
+  background-color: #fff;
+  color: rgb(15, 117, 224);
+  border: 2px solid rgb(15, 117, 224);
+  transition: all ease-out 0.2s;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

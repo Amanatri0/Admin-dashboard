@@ -1,11 +1,27 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import AdminSidebar from "../../component/AdminSidebar";
 
 const NewProducts = () => {
   const [name, setName] = useState<string>("");
   const [price, setPrice] = useState<number>();
   const [stock, setStock] = useState<number>();
+  const [description, setDescription] = useState<string>("");
   const [photo, setphoto] = useState<string>("");
+
+  const chnageImageHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const file: File | undefined = e.target.files?.[0];
+
+    const reader: FileReader = new FileReader();
+
+    if (file) {
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        if (typeof reader.result === "string") {
+          setphoto(reader.result);
+        }
+      };
+    }
+  };
 
   return (
     <div className="adminContainer">
@@ -40,8 +56,8 @@ const NewProducts = () => {
               <textarea
                 required
                 placeholder="Description"
-                value={price}
-                onChange={(e) => setPrice(Number(e.target.value))}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
               />
             </div>
             <div className="addProductStock">
@@ -54,14 +70,24 @@ const NewProducts = () => {
                 onChange={(e) => setStock(Number(e.target.value))}
               />
             </div>
-            <div className="addProductPhoto">
-              <label>Photo</label>
-              <input
-                type="file"
-                value={photo}
-                onChange={(e) => setphoto(e.target.value)}
-              />
+            <div className="photoShow">
+              <div className="addProductPhoto">
+                <label>Photo</label>
+                <input
+                  className="selectPhoto"
+                  required
+                  type="file"
+                  onChange={chnageImageHandler}
+                />
+              </div>
+
+              {photo && (
+                <img src={photo} alt="New Image" className="showPhoto" />
+              )}
             </div>
+            <button type="submit" className="submitbtn">
+              Create
+            </button>
           </form>
         </article>
       </main>
