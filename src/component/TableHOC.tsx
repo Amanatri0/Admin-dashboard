@@ -129,7 +129,7 @@ function TableHOC<T extends object>({
             onChange={(e) => table.setPageSize(Number(e.target.value))}
             className="pageSelector"
           >
-            {[4, 10, 20, 50].map((size) => (
+            {[4, 3, 2].map((size) => (
               <option key={size} value={size}>
                 Show {size}
               </option>

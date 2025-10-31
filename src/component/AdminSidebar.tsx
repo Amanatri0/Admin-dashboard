@@ -1,5 +1,4 @@
-// import { BiCoin } from "react-icons/bi";
-// import { BsWatch } from "react-icons/bs";
+import React from "react";
 import { IoIosPeople } from "react-icons/io";
 import {
   RiBarChart2Fill,
@@ -62,24 +61,6 @@ const AdminSidebar = () => {
       text: "Line",
     },
   ];
-
-  // const Apps = [
-  //   {
-  //     url: "/admin/app/stopwatch",
-  //     icon: <BsWatch />,
-  //     text: "Stopwatch",
-  //   },
-  //   {
-  //     url: "/admin/app/cupon",
-  //     icon: <RiCoupon2Fill />,
-  //     text: "Coupon",
-  //   },
-  //   {
-  //     url: "/admin/app/toss",
-  //     icon: <BiCoin />,
-  //     text: "Toss",
-  //   },
-  // ];
 
   return (
     <aside>
@@ -144,35 +125,6 @@ const AdminSidebar = () => {
           ))}
         </ul>
       </div>
-
-      {/* Apps */}
-      {/* 
-      <div>
-        <h5>Apps</h5>
-        <ul>
-          {Apps.map((item) => (
-            <li
-              style={{
-                backgroundColor: location.pathname.includes(item.url)
-                  ? "rgba(0,115, 255, 0.1)"
-                  : "white",
-              }}
-            >
-              <Link
-                to={item.url}
-                style={{
-                  color: location.pathname.includes(item.url)
-                    ? "rgba(0,115, 255)"
-                    : "black",
-                }}
-              >
-                {item.icon}
-                {item.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div> */}
     </aside>
   );
 };
