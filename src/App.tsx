@@ -13,6 +13,7 @@ const ProductManagement = lazy(
 const TransactionManagement = lazy(
   () => import("./pages/management/TransactionManagement")
 );
+const Cupon = lazy(() => import("./pages/apps/coupon"));
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           {/* charts  */}
 
           {/* Apps */}
+          <Route path="/admin/app/cupon" element={<Cupon />} />
 
           {/* Management */}
           <Route path="/admin/product/new" element={<NewProducts />} />

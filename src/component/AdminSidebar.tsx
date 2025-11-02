@@ -2,6 +2,7 @@ import React from "react";
 import { IoIosPeople } from "react-icons/io";
 import {
   RiBarChart2Fill,
+  RiCoupon2Fill,
   // RiCoupon2Fill,
   RiDashboardFill,
   RiLineChartFill,
@@ -62,6 +63,15 @@ const AdminSidebar = () => {
     },
   ];
 
+  const Apps = [
+    {
+      id: 1,
+      url: "/admin/app/cupon",
+      icon: <RiCoupon2Fill />,
+      text: "Cupon",
+    },
+  ];
+
   return (
     <aside>
       <h2>logo</h2>
@@ -102,6 +112,36 @@ const AdminSidebar = () => {
         <h5>Charts</h5>
         <ul>
           {Charts.map((item) => (
+            <li
+              style={{
+                backgroundColor: location.pathname.includes(item.url)
+                  ? "rgba(0,115, 255, 0.1)"
+                  : "white",
+              }}
+              key={item.id}
+            >
+              <Link
+                to={item.url}
+                style={{
+                  color: location.pathname.includes(item.url)
+                    ? "rgba(0,115, 255)"
+                    : "black",
+                }}
+              >
+                {item.icon}
+                {item.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* App */}
+
+      <div>
+        <h5>App</h5>
+        <ul>
+          {Apps.map((item) => (
             <li
               style={{
                 backgroundColor: location.pathname.includes(item.url)
