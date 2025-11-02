@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import AdminSidebar from "../../component/AdminSidebar";
 
 const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -49,6 +49,10 @@ const Coupon = () => {
 
     setCupon(result);
   };
+
+  useEffect(() => {
+    setIsCopied(false);
+  }, [cupon]);
 
   return (
     <div className="adminContainer">
