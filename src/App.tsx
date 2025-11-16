@@ -22,6 +22,7 @@ const Cupon = lazy(() => import("./pages/admin/apps/Coupon"));
 
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
+const Shipping = lazy(() => import("./pages/shipping"));
 
 const App = () => {
   return (
@@ -34,6 +35,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           {/* <Route path="/search" element={<Search />} /> */}
           <Route path="/cart" element={<Cart />} />
+
+          {/* Logged in User */}
+          <Route>
+            <Route path="/shipping" element={<Shipping />} />
+          </Route>
+
           {/* Admin Routes */}
           <Route>
             <Route path="/admin/dashboard" element={<Dashboard />} />

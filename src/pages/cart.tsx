@@ -82,7 +82,7 @@ const Cart = () => {
           ))}
 
         {cartItems.length > 0 ? (
-          <Link to={"/checkout"} className="payButton">
+          <Link to={"/shipping"} className="payButton">
             Proceed to pay
           </Link>
         ) : null}
