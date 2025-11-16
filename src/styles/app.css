@@ -11,7 +11,7 @@
 }
 
 .home {
-  padding: 2rem 5rem;
+  padding: 1rem 4rem;
   display: flex;
   flex-direction: column;
   height: calc(100vh - 4rem);
@@ -19,8 +19,232 @@
 }
 .home > section {
   width: 100%;
-  height: 18.75rem;
+  height: 10rem;
   margin: auto;
+  background: url("../assets/Wood perfume.jpeg") no-repeat bottom/cover;
+}
+.home > h1 {
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.home .findMore {
+  font-size: 1rem;
+}
+.home > main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+.home > main::-webkit-scrollbar {
+  display: none;
+}
+
+.productCard {
+  height: 20rem;
+  width: 18rem;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+}
+.productCard:hover > div {
+  opacity: 1;
+}
+.productCard img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1rem;
+  border-radius: 10px;
+}
+.productCard span {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.productCard > div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 52, 53, 0.4862745098);
+  opacity: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.productCard > div button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  border: none;
+  background-color: rgb(0, 104, 136);
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+.productCard > div button:hover {
+  rotate: 180deg;
+  scale: 1.3;
+}
+
+.cart {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  height: calc(100vh - 4rem);
+}
+.cart > main {
+  width: 70%;
+  overflow-y: auto;
+}
+.cart > main h1 {
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cart > main::-webkit-scrollbar {
+  display: none;
+}
+.cart > aside {
+  width: 30%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+}
+.cart > aside > input {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  outline: none;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+.cart > aside > p {
+  font-size: 1.1rem;
+}
+.cart > aside #couponText {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.cart > aside .payButton {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.cart > aside .payButton:hover {
+  background-color: rgba(0, 73.8, 153, 0.8);
+}
+.cart > aside .payButton:active {
+  scale: 0.92;
+}
+.cart > aside > span {
+  margin-top: -1rem;
+}
+
+.cartItem {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.cartItem > img {
+  height: 10rem;
+  width: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+.cartItem > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.cartItem > article a {
+  font-size: 1.2rem;
+  color: rgb(46, 46, 46);
+}
+.cartItem > article a:hover {
+  text-decoration: underline;
+  color: rgb(173.5, 173.5, 173.5);
+}
+.cartItem > article span {
+  font-weight: 700;
+}
+.cartItem div {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.cartItem div button {
+  padding: 0.5rem 0.95rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.cartItem div button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.cartItem .trashBtn {
+  background-color: transparent;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cartItem .trashBtn:hover {
+  transform: scale(0.75);
+  background-color: red;
+  color: white;
 }
 
 .dashboard {
