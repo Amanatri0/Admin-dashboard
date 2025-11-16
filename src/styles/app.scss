@@ -1,9 +1,3 @@
-@import "mixin";
-@import "dashboard";
-@import "products";
-@import "dashboardapp";
-@import "mediaquery";
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,6 +10,13 @@
   box-sizing: border-box;
 }
 
+@import "admin/mixin";
+
+@import "home";
+@import "admin/dashboard";
+@import "admin/products";
+@import "admin/dashboardapp";
+@import "admin/mediaquery";
 a {
   text-decoration: none;
   color: black;
@@ -25,6 +26,15 @@ a {
   color: red;
 }
 
+body {
+  user-select: none;
+}
+
+$color1: rgb(255, 255, 255);
+$color2: rgb(46, 46, 46);
+$color3: rgb(0, 104, 136);
+$color4: rgb(255, 0, 0);
+
 .purple {
   color: rgb(47, 0, 255);
 }
@@ -32,6 +42,65 @@ a {
   color: rgb(0, 195, 0);
 }
 
+.header {
+  @include flex(row, flex-end, stretch, 1.2rem);
+  padding: 1rem 2rem;
+  > a {
+    color: $color2;
+    letter-spacing: 2rem;
+    font-size: 1.2rem;
+    &:hover {
+      opacity: 0.7;
+      scale: 1.5;
+      transition: all 0.2s ease;
+      color: $color3;
+    }
+  }
+
+  button {
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+      scale: 1.3;
+      transition: all 0.2s ease;
+      color: $color3;
+    }
+  }
+
+  dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100px;
+    position: absolute;
+    left: calc(100% - 100px);
+    top: 8%;
+
+    > div {
+      @include flex(column, center, center, 1rem);
+
+      > a {
+        color: $color2;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+        &:hover {
+          opacity: 0.7;
+          scale: 1.2;
+          transition: all 0.2s ease;
+          color: $color3;
+        }
+        &:hover:last-child {
+          color: $color4;
+        }
+      }
+    }
+  }
+}
+
+// Admin Dashboard Styles
 .adminContainer {
   @include grid(1fr 4fr, 2rem);
   height: 100vh;
@@ -71,6 +140,7 @@ a {
   }
 }
 
+// Common Table Styles
 .table {
   border-collapse: collapse;
   width: 100%;
@@ -134,6 +204,7 @@ a {
   }
 }
 
+// Pagination Styles
 .tablePagination {
   @include flex;
   padding: 1rem;
@@ -145,3 +216,8 @@ a {
     }
   }
 }
+
+// .header {
+//   color: #111;
+//   font-size: 3rem;
+// }

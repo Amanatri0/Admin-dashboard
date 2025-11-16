@@ -1,6 +1,6 @@
 import { useCallback, useState, type ReactElement } from "react";
-import AdminSidebar from "../component/AdminSidebar";
-import TableHOC from "../component/TableHOC";
+import AdminSidebar from "../component/admin/AdminSidebar";
+import TableHOC from "../component/admin/TableHOC";
 import type { ColumnDef } from "@tanstack/react-table";
 import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";

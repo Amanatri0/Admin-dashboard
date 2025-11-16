@@ -1,12 +1,12 @@
 import { BsSearch } from "react-icons/bs";
-import AdminSidebar from "../component/AdminSidebar";
+import AdminSidebar from "../../component/admin/AdminSidebar";
 import { FaRegBell } from "react-icons/fa";
-import image from "../assets/profileimage.png";
+import image from "../../assets/profileimage.png";
 import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
-import data from "../assets/data.json";
-import { BarChart, DoughnutChart } from "../component/Charts";
+import data from "../../assets/data.json";
+import { BarChart, DoughnutChart } from "../../component/admin/Charts";
 
-import Table from "../component/DashboardTable";
+import Table from "../../component/admin/DashboardTable";
 
 const Dashboard = () => {
   return (

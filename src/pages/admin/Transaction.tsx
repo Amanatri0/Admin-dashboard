@@ -1,7 +1,7 @@
 import type { ColumnDef } from "@tanstack/react-table";
-import AdminSidebar from "../component/AdminSidebar";
+import AdminSidebar from "../../component/admin/AdminSidebar";
 import { useCallback, useState, type ReactElement } from "react";
-import TableHOC from "../component/TableHOC";
+import TableHOC from "../../component/admin/TableHOC";
 import { Link } from "react-router-dom";
 
 interface Datatype {

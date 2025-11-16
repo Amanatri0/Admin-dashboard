@@ -1,7 +1,7 @@
 import { useCallback, useState, type ReactElement } from "react";
-import AdminSidebar from "../component/AdminSidebar";
+import AdminSidebar from "../../component/admin/AdminSidebar";
 import type { ColumnDef } from "@tanstack/react-table";
-import TableHOC from "../component/TableHOC";
+import TableHOC from "../../component/admin/TableHOC";
 
 interface Datatype {
   avatar: ReactElement;
