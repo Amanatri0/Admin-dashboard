@@ -325,6 +325,80 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
+.login {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.login > main {
+  width: 100%;
+  height: 80%;
+  max-width: 400px;
+  padding: 2rem;
+  border: 1px solid #434141;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+}
+.login > main > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.2rem;
+}
+.login > main > div > input,
+.login > main > div > select {
+  padding: 1rem;
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(162, 162, 162, 0.53);
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.login > main > div > input:hover,
+.login > main > div > select:hover {
+  cursor: pointer;
+}
+.login > main > div > p {
+  text-align: center;
+  margin: 2rem;
+}
+.login > main > div > button {
+  width: 70%;
+  margin: auto;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(62, 125, 242);
+}
+.login > main > div > button > svg {
+  background-color: #ffffff;
+  width: 30%;
+  height: 100%;
+}
+.login > main > div > button > span {
+  width: 100%;
+  text-align: center;
+}
+
 .dashboard {
   overflow-y: auto;
 }

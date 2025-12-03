@@ -9,10 +9,8 @@ import {
 import { Link } from "react-router-dom";
 
 const user = {
-  _id: "123456",
+  _id: "12345",
   role: "admin",
-  name: "John Doe",
-  email: "",
 };
 
 const Header = () => {
@@ -48,15 +46,17 @@ const Header = () => {
                 >
                   Dashboard
                 </Link>
-              ) : null}
-              {user.role === "user" ? (
+              ) : (
                 <Link
                   onClick={() => setIsOpen((prev) => !prev)}
                   to={"/user/profile"}
                 >
                   Profile
                 </Link>
-              ) : null}
+              )}
+              {/* {user.role === "user" ? (
+                
+              ) : null} */}
               <Link onClick={() => setIsOpen((prev) => !prev)} to={"/orders"}>
                 Orders
               </Link>
